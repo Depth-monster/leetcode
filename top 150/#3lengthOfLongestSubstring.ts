@@ -1,26 +1,25 @@
-console.log('3rd leetcode')
+console.log("hi");
+
 function lengthOfLongestSubstring(s: string): number {
-    const substrings = s.split('');
-    let longestSubstringLength = 0;
+  const substring = s.split("");
+  let longesSubstring = 0;
 
-    for (let i = 0; i < substrings.length; i++) {
-        let seenChars = new Set();
-        let currentSubstringLength = 0;
+  for (let i = 0; i < substring.length; i++) {
+    let looking_man = new Set(); //instance of a Set object
+    let currentStringLength = 0;
 
-        for (let j = i; j < substrings.length; j++) {
-            if (!seenChars.has(substrings[j])) {
-                seenChars.add(substrings[j]);
-                currentSubstringLength++;
-                if (currentSubstringLength > longestSubstringLength) {
-                    longestSubstringLength = currentSubstringLength;
-                }
-            } else {
-                break;
-            }
-        }
+    for (let j = i; j < substring.length; j++) {
+      if (!looking_man.has(substring[j])) {
+        looking_man.add(substring[j]);
+        currentStringLength++; //abc abcda  //3
+        if(currentStringLength > longesSubstring)
+        longesSubstring = currentStringLength;
+      } else {
+        break;
+      }
     }
-console.log(longestSubstringLength);
-    return longestSubstringLength;
+  }
+  return longesSubstring;
 }
 //const s:string="abcabcdeabcd";
 //lengthOfLongestSubstring(s);
