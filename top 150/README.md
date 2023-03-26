@@ -5,6 +5,17 @@
 ![image](https://user-images.githubusercontent.com/122405130/227340870-af539c7f-2488-496a-9226-942bbe89f1d1.png)
 ##### 3. Longest Substring Without Repeating Characters
 ```typescript
+Input: s = "abcabcbb"
+Output: 3
+Explanation: The answer is "abc", with the length of 3.
+
+Input: s = "abcabcbb"
+Output: 3
+Explanation: The answer is "abc", with the length of 3.Input: s = "abcabcbb"
+Output: 3
+Explanation: The answer is "abc", with the length of 3.
+```
+```typescript
 function lengthOfLongestSubstring(s: string): number {
   const substring = s.split("");
   let longesSubstring = 0;
