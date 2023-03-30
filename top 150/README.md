@@ -1,8 +1,4 @@
 
-
-##### learning compilation ts in vs code
-![image](https://user-images.githubusercontent.com/122405130/227340833-ab31e6fc-ff18-400d-a2f6-5aaf1cbab502.png)
-![image](https://user-images.githubusercontent.com/122405130/227340870-af539c7f-2488-496a-9226-942bbe89f1d1.png)
 ##### 3. Longest Substring Without Repeating Characters
 Given a string s, find the length of the longest 
 substring
@@ -111,3 +107,46 @@ function findMedianSortedArrays(nums1: number[], nums2: number[]): number {
   } 
 }
 ```
+##### 5. Longest Palindromic Substring
+Given a string s, return the longest palindromic substring in s.
+
+A substring is a contiguous non-empty sequence of characters within a string.
+```typescript
+Example 1:
+
+Input: s = "babad"
+Output: "bab"
+Explanation: "aba" is also a valid answer.
+Example 2:
+
+Input: s = "cbbd"
+Output: "bb"
+
+```
+
+```typescript
+EConstraints:
+
+1 <= s.length <= 1000
+s consist of only digits and English letters.
+
+```
+```typescript
+code////
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+##### learning compilation ts in vs code
+![image](https://user-images.githubusercontent.com/122405130/227340833-ab31e6fc-ff18-400d-a2f6-5aaf1cbab502.png)
+![image](https://user-images.githubusercontent.com/122405130/227340870-af539c7f-2488-496a-9226-942bbe89f1d1.png)
