@@ -137,7 +137,7 @@ function findMedianSortedArrays(nums1: number[], nums2: number[]): number {
   } 
 }
 ```
-31.03.2023
+30-31.03.2023:
 ##### 5. Longest Palindromic Substring
 Given a string s, return the longest palindromic substring in s.
 
@@ -196,7 +196,7 @@ function expandFromCenter(s:string,L:number,R:number){
 return s.substring(start,end+1);//output [start,end]
 }
 ```
-
+31.03.2023:
 ##### 6.
 ```typescript
 
