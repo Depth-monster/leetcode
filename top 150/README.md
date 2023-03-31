@@ -197,7 +197,7 @@ return s.substring(start,end+1);//output [start,end]
 }
 ```
 31.03.2023:
-##### 6.
+##### 7.
 ```typescript
 
 ```
