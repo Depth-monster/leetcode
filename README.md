@@ -60,14 +60,11 @@ function lengthOfLongestSubstring(s: string): number {
 </details><!--module 3 code ends-->
 </details><!--module 3 ends-->
 
-
 <details>
 <summary> <strong>4. Median of Two Sorted Arrays</strong> </summary>
-
-Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.
-
-The overall run time complexity should be O(log (m+n)).
-
+ 
+Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
+ 
 ```typescript
 Example 1:
 Input: nums1 = [1,3], nums2 = [2]
@@ -88,10 +85,12 @@ nums2.length == n
 1 <= m + n <= 2000
 -106 <= nums1[i], nums2[i] <= 106
 ```
+<!--module 3 code-->
 <details>
 <summary><strong>See solution</strong></summary>
+
 ```typescript
- function findMedianSortedArrays(nums1:number[], nums2:number[]):number {
+function findMedianSortedArrays(nums1:number[], nums2:number[]):number {
   const totalLength:number = nums1.length + nums2.length;
   const isEven:boolean = totalLength % 2 === 0;
   const medianIndex:number = Math.floor(totalLength / 2);
@@ -115,12 +114,14 @@ nums2.length == n
 
   return isEven ? (prev + current) / 2 : current;
 }
- ```
-</details>
 
-</details>
+```
 
-
+</details><!--module 3 code ends-->
+</details><!--module 3 ends-->
+ 
+ 
+ 
 <details>
 <summary><strong>5. Longest Palindromic Substring</strong> </summary>
 30-31.03.2023:
