@@ -1,13 +1,17 @@
 <details><!--page starts-->
-<summary><strong>See my Leetcode solutions:</strong></summary>
+<summary><strong>MY LEETCODE SOLUTIONS:</strong></summary>
+<br>
 
 <!--modules-->
 <!--module 3 starts-->
 <details>
 <summary> <strong>3. Longest Substring Without Repeating Characters</strong> </summary>
-  
-Given a string s, find the length of the longest substring without repeating characters.
 
+Given a string s, find the length of the longest 
+substring
+ without repeating characters.
+
+```typescript
 Example 1:
 Input: s = "abcabcbb"
 Output: 3
@@ -22,7 +26,9 @@ Example 3:
 Input: s = "pwwkew"
 Output: 3
 Explanation: The answer is "wke", with the length of 3.
-Notice that the answer must be a substring, "pwke" is a subsequence and not a substring. 
+Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
+
+```
 <!--module 3 code-->
 <details>
 <summary><strong>See solution</strong></summary>
