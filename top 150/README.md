@@ -1,5 +1,5 @@
 <details>
-<summary> **3. Longest Substring Without Repeating Characters** </summary>
+ <summary> <strong>3. Longest Substring Without Repeating Characters</strong> </summary>
 <br>
 Given a string s, find the length of the longest 
 substring
