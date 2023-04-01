@@ -311,6 +311,8 @@ Step 3: "4193 with words" ("4193" is read in; reading stops because the next cha
 The parsed integer is 4193.
 Since 4193 is in the range [-231, 231 - 1], the final result is 4193.
 ```
+   ![image](https://user-images.githubusercontent.com/122405130/229276804-1c7a4ad6-74d2-49af-94a9-b231c80d05f3.png)
+
 <!--module 8 code-->
 <details>
 <summary><strong>See solution</strong></summary>
