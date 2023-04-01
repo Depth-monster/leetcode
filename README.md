@@ -91,7 +91,7 @@ nums2.length == n
 <details>
 <summary><strong>See solution</strong></summary>
 ```typescript
-function findMedianSortedArrays(nums1:number[], nums2:number[]):number {
+ function findMedianSortedArrays(nums1:number[], nums2:number[]):number {
   const totalLength:number = nums1.length + nums2.length;
   const isEven:boolean = totalLength % 2 === 0;
   const medianIndex:number = Math.floor(totalLength / 2);
@@ -115,8 +115,7 @@ function findMedianSortedArrays(nums1:number[], nums2:number[]):number {
 
   return isEven ? (prev + current) / 2 : current;
 }
-
-```
+ ```
 </details>
 
 </details>
