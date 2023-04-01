@@ -45,8 +45,8 @@ function lengthOfLongestSubstring(s: string): number {
   return longesSubstring;
 }
 ```
- <summary> <strong>4. Median of Two Sorted Arrays</strong> </summary>
-<br>
+</details>
+#####  4. Median of Two Sorted Arrays
  Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.
 
 The overall run time complexity should be O(log (m+n)).
@@ -138,8 +138,6 @@ function findMedianSortedArrays(nums1: number[], nums2: number[]): number {
   } 
 }
 ```
-</details>
-
 30-31.03.2023:
 ##### 5. Longest Palindromic Substring
 Given a string s, return the longest palindromic substring in s.
