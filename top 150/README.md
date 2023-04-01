@@ -1,6 +1,6 @@
 
-<details>
-##### <summary> 3. Longest Substring Without Repeating Characters</summary>
+##### <details>
+ <summary> 3. Longest Substring Without Repeating Characters</summary>
 <br>
 Given a string s, find the length of the longest 
 substring
