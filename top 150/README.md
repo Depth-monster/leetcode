@@ -1,5 +1,7 @@
 
-##### 3. Longest Substring Without Repeating Characters
+<details>
+<summary>##### 3. Longest Substring Without Repeating Characters</summary>
+<br>
 Given a string s, find the length of the longest 
 substring
  without repeating characters.
@@ -45,6 +47,9 @@ function lengthOfLongestSubstring(s: string): number {
 }
 
 ```
+</details>
+
+
 ##### 4. Median of Two Sorted Arrays
 Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.
 
