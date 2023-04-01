@@ -85,7 +85,7 @@ nums2.length == n
 1 <= m + n <= 2000
 -106 <= nums1[i], nums2[i] <= 106
 ```
-<!--module 3 code-->
+<!--module 4 code-->
 <details>
 <summary><strong>See solution</strong></summary>
 
@@ -117,7 +117,245 @@ function findMedianSortedArrays(nums1:number[], nums2:number[]):number {
 
 ```
 
-</details><!--module 3 code ends-->
-</details><!--module 3 ends-->
+</details><!--module 4 code ends-->
+</details><!--module 4 ends-->
+ 
+ 
+ 
+ 
+ <details>
+<summary> <strong>5. Longest Palindromic Substring</strong> </summary>
+  Given a string s, return the longest palindromic substring in s. 
+  A substring is a contiguous non-empty sequence of characters within a string.
+ 
+```typescript
+Example 1:
+Input: s = "babad"
+Output: "bab"
+Explanation: "aba" is also a valid answer.
+
+
+Example 2:
+Input: s = "cbbd"
+Output: "bb"
+  ```typescript
+  Constraints:
+
+ 1 <= s.length <= 1000
+ s consist of only digits and English letters.
+  ```
+  
+
+```
+<!--module 4 code-->
+<details>
+<summary><strong>See solution</strong></summary>
+
+```typescript
+function longestPalindrome(s:string):string {
+
+if(s.length<2){ 
+    return s;
+}
+
+let start:number=0;
+let end:number=0;
+
+for(let i=0;i<s.length;i++){
+let len1:number = expandFromCenter(s,i,i);//for odd length
+let len2:number = expandFromCenter(s,i,i+1);//for even length
+let len:number = Math.max(len1,len2);
+
+if(len > end - start){ //checking the length of a new palindrome. if thats longer than previous, rewrite end and start indexes
+    start = Math.ceil(i - (len-1)/2); //start index
+    end = Math.floor(i + (len/2)); //end index
+}
+
+}
+
+function expandFromCenter(s:string,L:number,R:number){//return the length
+    while( L>=0 && R < s.length && s[R] === s[L]){
+    L--;//expanding outwards left
+    R++;//expanding outwards right
+}
+    return R-L-1;
+}
+    
+return s.substring(start,end+1);//output [start,end]
+}
+```
+
+</details><!--module 4 code ends-->
+</details><!--module 4 ends-->
+ 
+ 
+ 
+ 
+ 
+  <details>
+<summary> <strong>5. Longest Palindromic Substring</strong> </summary>
+  Given a string s, return the longest palindromic substring in s. 
+  A substring is a contiguous non-empty sequence of characters within a string.
+ 
+```typescript
+
+```
+<!--module 6 code-->
+<details>
+<summary><strong>See solution</strong></summary>
+
+```typescript
+
+```
+
+</details><!--module 6 code ends-->
+</details><!--module 6 ends-->
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   <details>
+<summary> <strong>5. Longest Palindromic Substring</strong> </summary>
+  Given a string s, return the longest palindromic substring in s. 
+  A substring is a contiguous non-empty sequence of characters within a string.
+ 
+```typescript
+
+```
+<!--module 6 code-->
+<details>
+<summary><strong>See solution</strong></summary>
+
+```typescript
+
+```
+
+</details><!--module 6 code ends-->
+</details><!--module 6 ends-->
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <details>
+<summary> <strong>5. Longest Palindromic Substring</strong> </summary>
+  Given a string s, return the longest palindromic substring in s. 
+  A substring is a contiguous non-empty sequence of characters within a string.
+ 
+```typescript
+
+```
+<!--module 6 code-->
+<details>
+<summary><strong>See solution</strong></summary>
+
+```typescript
+
+```
+
+</details><!--module 6 code ends-->
+</details><!--module 6 ends-->
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <details>
+<summary> <strong>5. Longest Palindromic Substring</strong> </summary>
+  Given a string s, return the longest palindromic substring in s. 
+  A substring is a contiguous non-empty sequence of characters within a string.
+ 
+```typescript
+
+```
+<!--module 6 code-->
+<details>
+<summary><strong>See solution</strong></summary>
+
+```typescript
+
+```
+
+</details><!--module 6 code ends-->
+</details><!--module 6 ends-->
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <details>
+<summary> <strong>5. Longest Palindromic Substring</strong> </summary>
+  Given a string s, return the longest palindromic substring in s. 
+  A substring is a contiguous non-empty sequence of characters within a string.
+ 
+```typescript
+
+```
+<!--module 6 code-->
+<details>
+<summary><strong>See solution</strong></summary>
+
+```typescript
+
+```
+
+</details><!--module 6 code ends-->
+</details><!--module 6 ends-->
+ 
+ 
+ 
  
  </details>
