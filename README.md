@@ -147,7 +147,7 @@ Output: "bb"
   
 
 ```
-<!--module 4 code-->
+<!--module 5 code-->
 <details>
 <summary><strong>See solution</strong></summary>
 
@@ -185,175 +185,62 @@ return s.substring(start,end+1);//output [start,end]
 }
 ```
 
-</details><!--module 4 code ends-->
-</details><!--module 4 ends-->
+</details><!--module 5 code ends-->
+</details><!--module 5 ends-->
  
  
  
  
  
   <details>
-<summary> <strong>5. Longest Palindromic Substring</strong> </summary>
-  Given a string s, return the longest palindromic substring in s. 
-  A substring is a contiguous non-empty sequence of characters within a string.
+<summary> <strong>7.Reverse Integer</strong> </summary>
+Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-231, 231 - 1], then return 0.
+   Assume the environment does not allow you to store 64-bit integers (signed or unsigned).
+   ```typescript
+Example 1:
+Input: x = 123
+Output: 321
+
+Example 2:
+Input: x = -123
+Output: -321
+
+Example 3:
+Input: x = 120
+Output: 21
  
-```typescript
+
+Constraints:
+-231 <= x <= 231 - 1
 
 ```
-<!--module 6 code-->
+<!--module 7 code-->
 <details>
 <summary><strong>See solution</strong></summary>
 
 ```typescript
+function reverse(x:number):number {
+    let reversed:number = 0;
+    const sign:number = x < 0 ? -1 : 1;
+    x = Math.abs(x);
+    while (x > 0) {                             //x=123; digit=0; x=12; digit=3; x=1; digit=32;
+        const digit:number = x % 10;//123             //digit = 3; digit = 2; digit = 1%10 = 1;
+        reversed = (reversed * 10) + digit;   //(0) + 3; (3*10) + 2 = 32; (32*10) + 1 = 321
+        x = Math.floor(x / 10);              //123/10 = 12.3 => 12; 12/10 = 1.2 = 1; 1/10 = 0(floor) end
+    }
+    reversed *= sign;
+    // reversed < -2147483648 ||  reversed > 2147483647
+    if (reversed < Math.pow(-2, 31) || reversed > (Math.pow(2, 31) - 1)) { 
+        return 0;
+    }
+    return reversed;
 
+}
 ```
 
-</details><!--module 6 code ends-->
-</details><!--module 6 ends-->
+</details><!--module 7 code ends-->
+</details><!--module 7 ends-->
  
- 
- 
- 
- 
- 
- 
- 
- 
-   <details>
-<summary> <strong>5. Longest Palindromic Substring</strong> </summary>
-  Given a string s, return the longest palindromic substring in s. 
-  A substring is a contiguous non-empty sequence of characters within a string.
- 
-```typescript
-
-```
-<!--module 6 code-->
-<details>
-<summary><strong>See solution</strong></summary>
-
-```typescript
-
-```
-
-</details><!--module 6 code ends-->
-</details><!--module 6 ends-->
- 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    <details>
-<summary> <strong>5. Longest Palindromic Substring</strong> </summary>
-  Given a string s, return the longest palindromic substring in s. 
-  A substring is a contiguous non-empty sequence of characters within a string.
- 
-```typescript
-
-```
-<!--module 6 code-->
-<details>
-<summary><strong>See solution</strong></summary>
-
-```typescript
-
-```
-
-</details><!--module 6 code ends-->
-</details><!--module 6 ends-->
- 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    <details>
-<summary> <strong>5. Longest Palindromic Substring</strong> </summary>
-  Given a string s, return the longest palindromic substring in s. 
-  A substring is a contiguous non-empty sequence of characters within a string.
- 
-```typescript
-
-```
-<!--module 6 code-->
-<details>
-<summary><strong>See solution</strong></summary>
-
-```typescript
-
-```
-
-</details><!--module 6 code ends-->
-</details><!--module 6 ends-->
- 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    <details>
-<summary> <strong>5. Longest Palindromic Substring</strong> </summary>
-  Given a string s, return the longest palindromic substring in s. 
-  A substring is a contiguous non-empty sequence of characters within a string.
- 
-```typescript
-
-```
-<!--module 6 code-->
-<details>
-<summary><strong>See solution</strong></summary>
-
-```typescript
-
-```
-
-</details><!--module 6 code ends-->
-</details><!--module 6 ends-->
  
  
  
