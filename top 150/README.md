@@ -1,10 +1,16 @@
-
-<details>
- <summary> <strong>3. Longest Substring Without Repeating Characters</strong> </summary>
+<details><!--page starts-->
+<summary><strong>MY LEETCODE SOLUTIONS:</strong></summary>
 <br>
+
+<!--modules-->
+<!--module 3 starts-->
+<details>
+<summary> <strong>3. Longest Substring Without Repeating Characters</strong> </summary>
+
 Given a string s, find the length of the longest 
 substring
  without repeating characters.
+
 ```typescript
 Example 1:
 Input: s = "abcabcbb"
@@ -21,7 +27,11 @@ Input: s = "pwwkew"
 Output: 3
 Explanation: The answer is "wke", with the length of 3.
 Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
+
 ```
+<!--module 3 code-->
+<details>
+<summary><strong>See solution</strong></summary>
 
 ```typescript
 function lengthOfLongestSubstring(s: string): number {
@@ -46,12 +56,15 @@ function lengthOfLongestSubstring(s: string): number {
   return longesSubstring;
 }
 ```
-</details>
 
-#####  4. Median of Two Sorted Arrays
- Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.
+</details><!--module 3 code ends-->
+</details><!--module 3 ends-->
 
-The overall run time complexity should be O(log (m+n)).
+<details>
+<summary> <strong>4. Median of Two Sorted Arrays</strong> </summary>
+ 
+Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
+ 
 ```typescript
 Example 1:
 Input: nums1 = [1,3], nums2 = [2]
@@ -72,6 +85,10 @@ nums2.length == n
 1 <= m + n <= 2000
 -106 <= nums1[i], nums2[i] <= 106
 ```
+<!--module 4 code-->
+<details>
+<summary><strong>See solution</strong></summary>
+
 ```typescript
 function findMedianSortedArrays(nums1:number[], nums2:number[]):number {
   const totalLength:number = nums1.length + nums2.length;
@@ -100,53 +117,18 @@ function findMedianSortedArrays(nums1:number[], nums2:number[]):number {
 
 ```
 
-
-
+</details><!--module 4 code ends-->
+</details><!--module 4 ends-->
+ 
+ 
+ 
+ 
+ <details>
+<summary> <strong>5. Longest Palindromic Substring</strong> </summary>
+  Given a string s, return the longest palindromic substring in s. 
+  A substring is a contiguous non-empty sequence of characters within a string.
+ 
 ```typescript
-function findMedianSortedArrays(nums1: number[], nums2: number[]): number {
-  if (nums1.length > nums2.length) {
-    [nums1, nums2] = [nums2, nums1]; // swap to ensure nums1 is smaller
-  }
-  
-  const m = nums1.length;
-  const n = nums2.length;
-  let iMin = 0;
-  let iMax = m;
-  const mid = Math.floor((m + n + 1) / 2);
-
-  while (iMin <= iMax) {
-    const i = Math.floor((iMin + iMax) / 2);
-    const j = mid - i;
-    
-    if (i < iMax && nums2[j-1] > nums1[i]) {
-      iMin = i + 1;
-    } else if (i > iMin && nums1[i-1] > nums2[j]) {
-      iMax = i - 1;
-    } else {
-      const leftMax = i === 0 ? nums2[j-1]
-        : j === 0 ? nums1[i-1]
-        : Math.max(nums1[i-1], nums2[j-1]);
-      
-      if ((m + n) % 2 === 1) {
-        return leftMax;
-      }
-      
-      const rightMin = i === m ? nums2[j]
-        : j === n ? nums1[i]
-        : Math.min(nums1[i], nums2[j]);
-      
-      return (leftMax + rightMin) / 2;
-    }
-  } 
-}
-```
-30-31.03.2023:
-##### 5. Longest Palindromic Substring
-Given a string s, return the longest palindromic substring in s.
-
-A substring is a contiguous non-empty sequence of characters within a string.
-```typescript
-
 Example 1:
 Input: s = "babad"
 Output: "bab"
@@ -157,15 +139,15 @@ Example 2:
 Input: s = "cbbd"
 Output: "bb"
 
-```
-
-```typescript
-EConstraints:
+Constraints:
 
  1 <= s.length <= 1000
  s consist of only digits and English letters.
-
 ```
+<!--module 5 code-->
+<details>
+<summary><strong>See solution</strong></summary>
+
 ```typescript
 function longestPalindrome(s:string):string {
 
@@ -199,11 +181,18 @@ function expandFromCenter(s:string,L:number,R:number){//return the length
 return s.substring(start,end+1);//output [start,end]
 }
 ```
-31.03-01.04.2023:
-##### 7.Reverse Integer
+
+</details><!--module 5 code ends-->
+</details><!--module 5 ends-->
+ 
+
+  
+  <details>
+<summary> <strong>7.Reverse Integer</strong> </summary>
 Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-231, 231 - 1], then return 0.
-###### Assume the environment does not allow you to store 64-bit integers (signed or unsigned).
-```example
+   Assume the environment does not allow you to store 64-bit integers (signed or unsigned).
+   
+   ```typescript
 Example 1:
 Input: x = 123
 Output: 321
@@ -219,8 +208,11 @@ Output: 21
 
 Constraints:
 -231 <= x <= 231 - 1
-
 ```
+<!--module 7 code-->
+<details>
+<summary><strong>See solution</strong></summary>
+
 ```typescript
 function reverse(x:number):number {
     let reversed:number = 0;
@@ -240,28 +232,45 @@ function reverse(x:number):number {
 
 }
 ```
-01.04.2023:
-##### 8. String to Integer (atoi)
+
+</details><!--module 7 code ends-->
+</details><!--module 7 ends-->
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  <details>
+<summary> <strong>8. String to Integer (atoi)</strong> </summary>
 Implement the myAtoi(string s) function, which converts a string to a 32-bit signed integer (similar to C/C++'s atoi function).
 
-The algorithm for myAtoi(string s) is as follows:
+   The algorithm for <strong>myAtoi(string s)</strong> is as follows:
 
-Read in and ignore any leading whitespace.
-Check if the next character (if not already at the end of the string) is '-' or '+'. Read this character in if it is either. This determines if the final result is negative or positive respectively. Assume the result is positive if neither is present.
-Read in next the characters until the next non-digit character or the end of the input is reached. The rest of the string is ignored.
-Convert these digits into an integer (i.e. "123" -> 123, "0032" -> 32). If no digits were read, then the integer is 0. Change the sign as necessary (from step 2).
-If the integer is out of the 32-bit signed integer range [-231, 231 - 1], then clamp the integer so that it remains in the range. Specifically, integers less than -231 should be clamped to -231, and integers greater than 231 - 1 should be clamped to 231 - 1.
-Return the integer as the final result.
-
-###### Note:
-<ul>
- <li>Only the space character ' ' is considered a whitespace character.</li>
- <li>Do not ignore any characters other than the leading whitespace or the rest of the string after the digits.</li>
-</ul>
-
-
-
-```example
+Read in and ignore any leading whitespace. 
+   
+   Check if the next character (if not already at the end of the string) is '-' or '+'. Read this character in if it is either. This determines if the final result is negative or positive respectively. Assume the result is positive if neither is present. 
+   
+   Read in next the characters until the next non-digit character or the end of the input is reached. The rest of the string is ignored. 
+   
+   
+   Convert these digits into an integer (i.e. "123" -> 123, "0032" -> 32). If no digits were read, then the integer is 0. Change the sign as necessary (from step 2). 
+   
+   If the integer is out of the 32-bit signed integer range [-231, 231 - 1], then clamp the integer so that it remains in the range. Specifically, integers less than -231 should be clamped to -231, and integers greater than 231 - 1 should be clamped to 231 - 1. 
+   
+   Return the integer as the final result.
+   
+   
+   Note:
+   <ul>
+    <li>Only the space character ' ' is considered a whitespace character.</li>
+    <li>Do not ignore any characters other than the leading whitespace or the rest of the string after the digits.</li>
+   </ul>
+   
+   ```typescript
 
 Example 1:
 Input: s = "42"
@@ -302,18 +311,21 @@ Step 3: "4193 with words" ("4193" is read in; reading stops because the next cha
 The parsed integer is 4193.
 Since 4193 is in the range [-231, 231 - 1], the final result is 4193.
 ```
+   ![image](https://user-images.githubusercontent.com/122405130/229276804-1c7a4ad6-74d2-49af-94a9-b231c80d05f3.png)
+
+<!--module 8 code-->
+<details>
+<summary><strong>See solution</strong></summary>
+
 ```typescript
+!!!!!!!!!!!!!
+ ```
 
-```
-
-
-
-
-
-
-
-
-<!-- ##### learning compilation ts in vs code
-![image](https://user-images.githubusercontent.com/122405130/227340833-ab31e6fc-ff18-400d-a2f6-5aaf1cbab502.png)
-![image](https://user-images.githubusercontent.com/122405130/227340870-af539c7f-2488-496a-9226-942bbe89f1d1.png)
--->
+</details><!--module 8 code ends-->
+</details><!--module 8 ends-->
+ 
+ 
+ 
+ 
+ 
+ </details>
